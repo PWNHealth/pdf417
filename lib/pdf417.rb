@@ -16,10 +16,11 @@ class PDF417
   def initialize(*attrs)
     # TODO:  Test these defaults, make sure that they can get set on init, check to see that the output changes accordingly
     self.text = ""
-    @y_height = 3
-    @aspect_ratio = 0.5
-    @rows = 1
+    @y_height = 1
+    @aspect_ratio = 0.25
+    @rows = 0
     @cols = 0
+    @error_level = 4
     
     if attrs.first.is_a?(String)
       self.text = attrs.first
@@ -196,7 +197,7 @@ class PDF417
   def encoding_to_s
     self.encoding.each{|x| puts x.gsub("0"," ")}
   end
-  
+
   def to_png(opts = {})
     require 'chunky_png' unless defined?(ChunkyPNG)
     
@@ -227,6 +228,5 @@ class PDF417
     end
     canvas.to_datastream.to_s    
   end
-    
   
 end
