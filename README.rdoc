@@ -1,5 +1,7 @@
 = pdf417
 
+:warning: This repository is deprecated. No further Issues or Pull Requests will be considered or approved. If you need to do development work, report any issues, contribute any improvements, or download the latest release, please do so at: https://gitlab.com/everlywell/projects/gems/pdf417
+
 A wrapper for the pdf417lib C Library, from the README:
 
     A library to generate the 2D barcode PDF417
